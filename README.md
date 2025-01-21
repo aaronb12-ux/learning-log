@@ -1,2 +1,0 @@
-# learning-log
-# learning-log
