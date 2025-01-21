@@ -1,0 +1,14 @@
+{% extends "learning_logs/base.html" %}
+{% load bootstrap3 %}
+
+{% block content %}
+<h2>Are you sure you want to delete topic "{{ topic }}" ?</h2>
+<p>This action cannot be undone. All entries associated with this topic will be removed.</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Yes, delete</button>
+    <a href="{% url 'learning_logs:topic' topic.id %}" class="btn btn-secondary">Go back</a>
+</form>
+
+{% endblock content %}
